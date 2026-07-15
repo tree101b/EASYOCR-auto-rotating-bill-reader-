@@ -1,0 +1,28 @@
+# --- Runtime data (don't commit user images or generated results) ---
+uploads/*
+outputs/*
+# ...but keep the empty folders so the app has somewhere to write.
+!uploads/.gitkeep
+!outputs/.gitkeep
+
+# --- Server / debug output ---
+server.log
+*.log
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+*.egg-info/
+
+# --- OCR model cache (auto-downloaded on first run, ~100 MB) ---
+.EasyOCR/
+
+# --- Editor / OS junk ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

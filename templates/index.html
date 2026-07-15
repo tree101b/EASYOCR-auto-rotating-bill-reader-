@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Invoice-AI — Scan & Extract</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>🧾 Invoice-AI</h1>
+    <p>Upload an invoice or bill — the model scans it and extracts the text.</p>
+  </header>
+
+  <main>
+    <section class="card" id="uploader">
+      <form id="scan-form">
+        <label class="drop" id="drop">
+          <input type="file" id="file" name="image" accept="image/*" hidden>
+          <span id="drop-label">Click or drop an invoice image here</span>
+          <img id="preview" alt="preview" hidden>
+        </label>
+
+        <div class="rotate-row">
+          <label for="rotate">If the image is sideways, choose how to turn it:</label>
+          <select id="rotate" name="rotate">
+            <option value="auto">Auto-detect (slower)</option>
+            <option value="none">It's already upright</option>
+            <option value="left">Turn left 90°</option>
+            <option value="right">Turn right 90°</option>
+            <option value="180">Upside down (180°)</option>
+          </select>
+        </div>
+
+        <button type="submit" id="go">Scan invoice</button>
+      </form>
+      <p class="status" id="status"></p>
+    </section>
+
+    <section class="card" id="results" hidden>
+      <div class="summary" id="summary"></div>
+      <h3>Extracted text</h3>
+      <pre id="text"></pre>
+      <a id="download" class="btn-link" href="#" download>Download .txt</a>
+    </section>
+  </main>
+
+  <footer>Powered by EasyOCR · running locally on this machine</footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
