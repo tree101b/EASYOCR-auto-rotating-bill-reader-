@@ -1,3 +1,5 @@
+
+
 # Invoice-AI — Bill & Invoice Text Extractor
 
 A web app that scans photos of invoices and bills and extracts their text using
@@ -132,3 +134,5 @@ Each scan runs through this pipeline in `app.py`:
 - OCR powered by [EasyOCR](https://github.com/JaidedAI/EasyOCR) by JaidedAI
 - Web server built with [Flask](https://flask.palletsprojects.com/)
 - Image preprocessing with [OpenCV](https://opencv.org/)
+
+- VIDEO ON HOW IT WORKS https://drive.google.com/file/d/1TCEEdoU19LiRrD4IzqW6JeWGBGOasmw9/view?usp=sharing
